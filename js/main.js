@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const currentPath = window.location.pathname.split('/').pop() || 'index.php';
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.main-nav .nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.php') || (currentPath.includes(href) && href !== 'index.php' && href !== '../index.php')) {
+    if (href === currentPath || (currentPath === '' && href === 'index.html') || (currentPath.includes(href) && href !== 'index.html' && href !== '../index.html')) {
       link.classList.add('active');
     }
   });
